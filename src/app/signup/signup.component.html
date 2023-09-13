@@ -1,0 +1,129 @@
+<body class="d-flex align-items-center min-h-100">
+    <!-- ========== HEADER ========== -->
+    <header id="header" class="navbar navbar-expand navbar-light navbar-absolute-top">
+      <div class="container-fluid">
+        <nav class="navbar-nav-wrap">
+          <!-- White Logo -->
+          <a class="navbar-brand d-none d-lg-flex" href="./index.html" aria-label="Front">
+            <img class="navbar-brand-logo" [src] ="ImagePath" alt="Logo">
+          </a>
+          <!-- End White Logo -->
+  
+          <!-- Default Logo -->
+          <a class="navbar-brand d-flex d-lg-none" href="./index.html" aria-label="Front">
+            <img class="navbar-brand-logo" [src] ="ImagePath" alt="Logo">
+          </a>
+          <!-- End Default Logo -->
+  
+          <div class="ms-auto">
+            <a class="link link-sm link-secondary" href="./index.html">
+              <i class="bi-chevron-left small ms-1"></i> Regresar a saldi.mx
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- ========== END HEADER ========== -->
+  
+    <!-- ========== MAIN CONTENT ========== -->
+    <main id="content" role="main" class="flex-grow-1">
+      <!-- Form -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-5 col-xl-4 d-none d-lg-flex justify-content-center align-items-center min-vh-lg-100 position-relative bg-dark">
+            <div class="flex-grow-1 p-5">
+              <!-- Blockquote -->
+              <figure class="text-center">
+                <blockquote class="blockquote blockquote-light">“ Construyendo Juntos tu Negocio en Línea con Saldi. ”</blockquote>
+              </figure>
+              <!-- End Blockquote --> 
+            </div>
+          </div>
+          <!-- End Col -->
+  
+          <div class="col-lg-7 col-xl-8 d-flex justify-content-center align-items-center min-vh-lg-100">
+            <div class="flex-grow-1 mx-auto" style="max-width: 28rem;">
+              <!-- Heading -->
+              <div class="text-center mb-5 mb-md-7">
+                <h1 class="h2">Bienvenido a Saldi</h1>
+                <p>Complete el formulario para comenzar..</p>
+              </div>
+              <!-- End Heading -->
+  
+              <!-- Form -->
+              <form class="js-validate needs-validation" novalidate="">
+                <!-- Form -->
+                <div class="mb-3">
+                  <label class="form-label" for="signupModalFormSignupEmail">Email</label>
+                  <input type="email" class="form-control form-control-lg" name="email" id="signupModalFormSignupEmail" placeholder="email@saldi.mx" aria-label="email@site.com" required="">
+                  <span class="invalid-feedback">Introduce tu correo electronico.</span>
+                </div>
+                <!-- End Form -->
+  
+                <!-- Form -->
+                <div class="mb-3">
+                  <label class="form-label" for="signupModalFormSignupPassword">Contraseña</label>
+  
+                  <div class="input-group input-group-merge" data-hs-validation-validate-class="">
+                    <input type="password" class="js-toggle-password form-control form-control-lg" name="password" id="signupModalFormSignupPassword" placeholder="8+ digitos" aria-label="8+ digitos" required="" data-hs-toggle-password-options="{
+                               &quot;target&quot;: [&quot;.js-toggle-password-target-1&quot;, &quot;.js-toggle-password-target-2&quot;],
+                               &quot;defaultClass&quot;: &quot;bi-eye-slash&quot;,
+                               &quot;showClass&quot;: &quot;bi-eye&quot;,
+                               &quot;classChangeTarget&quot;: &quot;.js-toggle-passowrd-show-icon-1&quot;
+                             }">
+                    <a class="js-toggle-password-target-1 input-group-append input-group-text" href="javascript:;">
+                      <i class="js-toggle-passowrd-show-icon-1 bi-eye-slash"></i>
+                    </a>
+                  </div>
+  
+                  <span class="invalid-feedback">Tu contraseña es invalida. Intenta de nuevo.</span>
+                </div>
+                <!-- End Form -->
+  
+                <!-- Form -->
+                <div class="mb-3">
+                  <label class="form-label" for="signupModalFormSignupConfirmPassword">Confirmar contraseña</label>
+  
+                  <div class="input-group input-group-merge" data-hs-validation-validate-class="">
+                    <input type="password" class="js-toggle-password form-control form-control-lg" name="confirmPassword" id="signupModalFormSignupConfirmPassword" placeholder="8+ digitos" aria-label="8+ digitos" required="" data-hs-validation-equal-field="#signupModalFormSignupPassword" data-hs-toggle-password-options="{
+                             &quot;target&quot;: [&quot;.js-toggle-password-target-1&quot;, &quot;.js-toggle-password-target-2&quot;],
+                             &quot;defaultClass&quot;: &quot;bi-eye-slash&quot;,
+                             &quot;showClass&quot;: &quot;bi-eye&quot;,
+                             &quot;classChangeTarget&quot;: &quot;.js-toggle-passowrd-show-icon-2&quot;
+                           }">
+                    <a class="js-toggle-password-target-2 input-group-append input-group-text" href="javascript:;">
+                      <i class="js-toggle-passowrd-show-icon-2 bi-eye-slash"></i>
+                    </a>
+                  </div>
+  
+                  <span class="invalid-feedback">La contraseña no coincide. Intenta de nuevo.</span>
+                </div>
+                <!-- End Form -->
+  
+                <!-- Check -->
+                <div class="form-check mb-3">
+                  <input type="checkbox" class="form-check-input" id="signupHeroFormPrivacyCheck" name="signupFormPrivacyCheck" required="">
+                  <label class="form-check-label small" for="signupHeroFormPrivacyCheck"> Al enviar este formulario he leído y acepto la <a href="./page-privacy.html">Política de Privacidad</a></label>
+                  <span class="invalid-feedback">Por favor acepte nuestra Política de Privacidad.</span>
+                </div>
+                <!-- End Check -->
+  
+                <div class="d-grid mb-3">
+                  <button type="submit" class="btn btn-primary btn-lg">Registrar cuenta</button>
+                </div>
+  
+                <div class="text-center">
+                  <p>¿Ya tienes una cuenta? <a class="link" href="/login">Inicia sesión aquí</a></p>
+                </div>
+              </form>
+              <!-- End Form -->
+            </div>
+          </div>
+          <!-- End Col -->
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Form -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+  </body>
