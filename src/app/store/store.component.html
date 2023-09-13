@@ -1,1 +1,8 @@
-<p>store works!</p>
+<div *ngIf="productId; else noIdMessage">
+    <!-- Contenido relacionado con el parámetro 'id' -->
+    <p>ID del producto: {{ productId }}</p>
+  </div>
+  <ng-template #noIdMessage>
+    <!-- Mensaje o contenido predeterminado -->
+    <p>{{ productId }}</p>
+  </ng-template>

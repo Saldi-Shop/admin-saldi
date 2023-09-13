@@ -22,14 +22,10 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/assets/fonts/bootstrap-icons.woff",
-              "src/assets/fonts/bootstrap-icons.woff2"
+              "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "src/css/theme.min.css",
-              "src/css/bootstrap-icons/font/bootstrap-icons.css"
+              "src/styles.css"
             ],
             "scripts": []
           },

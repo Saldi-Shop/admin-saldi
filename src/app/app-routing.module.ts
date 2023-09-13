@@ -7,11 +7,14 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { StoreComponent } from './store/store.component';
 
 const routes: Routes = [
+  { path: 's', component: StoreComponent },
+  { path: 's/:id', component: StoreComponent },
+  //
   { path: '', component: SearchComponent},
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent},
-  { path: 'reset', component: ResetPasswordComponent},
-  { path: 's/:id', component: StoreComponent },
+  { path: 'reset', component: ResetPasswordComponent}
+
 ];
 
 @NgModule({
