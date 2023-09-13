@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SearchComponent } from './search/search.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { SignupComponent } from './signup/signup.component';
+import { StoreComponent } from './store/store.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SignupComponent } from './signup/signup.component';
     LoginComponent,
     SearchComponent,
     ResetPasswordComponent,
-    SignupComponent
+    SignupComponent,
+    StoreComponent
   ],
   imports: [
     BrowserModule,
