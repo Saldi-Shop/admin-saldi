@@ -51,12 +51,12 @@
               <!-- End Heading -->
   
               <!-- Form -->
-              <form class="js-validate needs-validation" novalidate="">
+              <form (ngSubmit)="onSubmit()" class="js-validate needs-validation" novalidate="">
                 <!-- Form -->
                 <div class="mb-3">
                   <label class="form-label" for="signupModalFormSignupEmail">Email</label>
-                  <input type="email" class="form-control form-control-lg" name="email" id="signupModalFormSignupEmail" placeholder="email@saldi.mx" aria-label="email@site.com" required="">
-                  <span class="invalid-feedback">Introduce tu correo electronico.</span>
+                  <input [(ngModel)]="user.email" type="email" class="form-control form-control-lg" name="email" id="signupModalFormSignupEmail" placeholder="email@saldi.mx" aria-label="email@site.com" required="" autocomplete="email">
+                  <span class="messages">{{mensajes.email}}</span>
                 </div>
                 <!-- End Form -->
   
@@ -65,18 +65,13 @@
                   <label class="form-label" for="signupModalFormSignupPassword">Contraseña</label>
   
                   <div class="input-group input-group-merge" data-hs-validation-validate-class="">
-                    <input type="password" class="js-toggle-password form-control form-control-lg" name="password" id="signupModalFormSignupPassword" placeholder="8+ digitos" aria-label="8+ digitos" required="" data-hs-toggle-password-options="{
-                               &quot;target&quot;: [&quot;.js-toggle-password-target-1&quot;, &quot;.js-toggle-password-target-2&quot;],
-                               &quot;defaultClass&quot;: &quot;bi-eye-slash&quot;,
-                               &quot;showClass&quot;: &quot;bi-eye&quot;,
-                               &quot;classChangeTarget&quot;: &quot;.js-toggle-passowrd-show-icon-1&quot;
-                             }">
+                    <input [(ngModel)]="user.password" type="password" class="js-toggle-password form-control form-control-lg" name="password" id="signupModalFormSignupPassword" placeholder="8+ digitos" aria-label="8+ digitos" required="" autocomplete="password">
                     <a class="js-toggle-password-target-1 input-group-append input-group-text" href="javascript:;">
                       <i class="js-toggle-passowrd-show-icon-1 bi-eye-slash"></i>
                     </a>
                   </div>
   
-                  <span class="invalid-feedback">Tu contraseña es invalida. Intenta de nuevo.</span>
+                  <span class="messages">{{mensajes.pass}}</span>
                 </div>
                 <!-- End Form -->
   
@@ -85,18 +80,13 @@
                   <label class="form-label" for="signupModalFormSignupConfirmPassword">Confirmar contraseña</label>
   
                   <div class="input-group input-group-merge" data-hs-validation-validate-class="">
-                    <input type="password" class="js-toggle-password form-control form-control-lg" name="confirmPassword" id="signupModalFormSignupConfirmPassword" placeholder="8+ digitos" aria-label="8+ digitos" required="" data-hs-validation-equal-field="#signupModalFormSignupPassword" data-hs-toggle-password-options="{
-                             &quot;target&quot;: [&quot;.js-toggle-password-target-1&quot;, &quot;.js-toggle-password-target-2&quot;],
-                             &quot;defaultClass&quot;: &quot;bi-eye-slash&quot;,
-                             &quot;showClass&quot;: &quot;bi-eye&quot;,
-                             &quot;classChangeTarget&quot;: &quot;.js-toggle-passowrd-show-icon-2&quot;
-                           }">
+                    <input [(ngModel)]="user.confirmPassword" type="password" class="js-toggle-password form-control form-control-lg" name="confirmPassword" id="signupModalFormSignupConfirmPassword" placeholder="8+ digitos" aria-label="8+ digitos" required="" data-hs-validation-equal-field="#signupModalFormSignupPassword" autocomplete="password">
                     <a class="js-toggle-password-target-2 input-group-append input-group-text" href="javascript:;">
                       <i class="js-toggle-passowrd-show-icon-2 bi-eye-slash"></i>
                     </a>
                   </div>
   
-                  <span class="invalid-feedback">La contraseña no coincide. Intenta de nuevo.</span>
+                  <span class="messages">{{mensajes.confirmPass}}</span>
                 </div>
                 <!-- End Form -->
   
@@ -104,7 +94,7 @@
                 <div class="form-check mb-3">
                   <input type="checkbox" class="form-check-input" id="signupHeroFormPrivacyCheck" name="signupFormPrivacyCheck" required="">
                   <label class="form-check-label small" for="signupHeroFormPrivacyCheck"> Al enviar este formulario he leído y acepto la <a href="./page-privacy.html">Política de Privacidad</a></label>
-                  <span class="invalid-feedback">Por favor acepte nuestra Política de Privacidad.</span>
+                  <span class="messages">{{mensajes.privacy}}</span>
                 </div>
                 <!-- End Check -->
   

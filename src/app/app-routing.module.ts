@@ -10,8 +10,8 @@ const routes: Routes = [
   { path: 's', component: StoreComponent },
   { path: 's/:id', component: StoreComponent },
   //
-  { path: '', component: SearchComponent},
-  { path: 'login', component: LoginComponent },
+  { path: 'search', component: SearchComponent},
+  { path: '', component: LoginComponent },
   { path: 'signup', component: SignupComponent},
   { path: 'reset', component: ResetPasswordComponent}
 

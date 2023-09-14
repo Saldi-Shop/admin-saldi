@@ -58,11 +58,11 @@
               <!-- End Heading -->
   
               <!-- Form -->
-              <form class="js-validate needs-validation" novalidate="">
+              <form (ngSubmit)="onSubmit()" class="js-validate needs-validation">
                 <!-- Form -->
                 <div class="mb-4">
-                  <label class="form-label" for="signupModalFormLoginEmail">Email</label>
-                  <input type="email" class="form-control form-control-lg" name="email" id="signupModalFormLoginEmail" placeholder="email@saldi.mx" aria-label="email@saldi.mx" required="">
+                  <label for="username" class="form-label" for="signupModalFormLoginEmail">Email</label>
+                  <input [(ngModel)]="user.email" type="email" class="form-control form-control-lg" name="email" id="signupModalFormLoginEmail" placeholder="email@saldi.mx" aria-label="email@saldi.mx" required="" autocomplete="email">
                   <span class="invalid-feedback">Introduce tu correo electronico.</span>
                 </div>
                 <!-- End Form -->
@@ -76,17 +76,11 @@
                   </div>
   
                   <div class="input-group input-group-merge" data-hs-validation-validate-class="">
-                    <input type="password" class="js-toggle-password form-control form-control-lg" name="password" id="signupModalFormLoginPassword" placeholder="8+ digitos" aria-label="8+ characters required" required="" minlength="8" data-hs-toggle-password-options="{
-                           &quot;target&quot;: &quot;#changePassTarget&quot;,
-                           &quot;defaultClass&quot;: &quot;bi-eye-slash&quot;,
-                           &quot;showClass&quot;: &quot;bi-eye&quot;,
-                           &quot;classChangeTarget&quot;: &quot;#changePassIcon&quot;
-                         }">
+                    <input [(ngModel)]="user.password" type="password" class="js-toggle-password form-control form-control-lg" name="password" id="signupModalFormLoginPassword" placeholder="8+ digitos" aria-label="8+ characters required" required="" minlength="8" autocomplete="password">
                     <a id="changePassTarget" class="input-group-append input-group-text" href="javascript:;">
-                      <i id="changePassIcon" class="bi-eye-slash"></i>
+                      <i class="fa fa-fw fa-eye"></i>
                     </a>
                   </div>
-  
                   <span class="invalid-feedback">Introduce una contraseña valida.</span>
                 </div>
                 <!-- End Form -->
